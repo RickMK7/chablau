@@ -12,7 +12,7 @@ pipeline {
                 script {
                     echo 'Iniciando a construção da imagem'
                     // Construindo a imagem Docker
-                    dockerapp = docker.build("registry.tools.havan.com.br/devops/node-pokemon:${env.BUILD_ID}", '-f ./src/Dockerfile ./src')
+                    dockerapp = docker.build("registry.tools.havan.com.br/devops/nada-list:${env.BUILD_ID}", '-f ./src/Dockerfile ./src')
                 }
             }
         }
