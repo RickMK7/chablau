@@ -20,7 +20,7 @@ pipeline {
             steps {
                 script {
                     // Fazendo push da imagem para o registro
-                    docker.withRegistry('https://registry.tools.havan.com.br/', 'havan-registry-credentials') {
+                    docker.withRegistry('https://registry.tools.havan.com.br/', 'lab') {
                         dockerapp.push('latest')
                         dockerapp.push("${env.BUILD_ID}")
                     }
